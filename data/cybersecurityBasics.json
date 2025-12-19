@@ -1,0 +1,100 @@
+{
+    "quiz": {
+      "title": "Cybersecurity Basics Quiz",
+      "difficulty": "easy",
+      "totalQuestions": 7,
+      "totalPoints": 10,
+      "questions": [
+        {
+          "id": 1,
+          "type": "multiple_choice",
+          "points": 2,
+          "question": "What is the main purpose of a firewall?",
+          "options": [
+            "To store files securely",
+            "To block unauthorized network access",
+            "To scan emails for spam",
+            "To encrypt passwords"
+          ],
+          "correctAnswer": "To block unauthorized network access",
+          "explanation": "A firewall monitors and controls network traffic to prevent unauthorized access."
+        },
+        {
+          "id": 2,
+          "type": "multiple_choice",
+          "points": 2,
+          "question": "Which of the following is an example of a strong password?",
+          "options": [
+            "password123",
+            "qwerty",
+            "Summer2020",
+            "G7!kP9#r2"
+          ],
+          "correctAnswer": "G7!kP9#r2",
+          "explanation": "Strong passwords contain a mix of letters, numbers, and special characters."
+        },
+        {
+          "id": 3,
+          "type": "true_false",
+          "points": 1,
+          "question": "Phishing attacks try to trick users into revealing sensitive information such as passwords or credit card numbers.",
+          "correctAnswer": true,
+          "explanation": "Phishing uses deceptive messages or websites to steal sensitive information."
+        },
+        {
+          "id": 4,
+          "type": "open_text",
+          "points": 1,
+          "question": "What does the term 'malware' mean?",
+          "acceptableKeywords": [
+            "malicious",
+            "harm",
+            "unauthorized",
+            "software"
+          ],
+          "sampleAnswer": "Malicious software designed to harm or gain unauthorized access to systems.",
+          "scoringRule": "Award 1 point if the answer mentions malicious software or software that causes harm.",
+          "explanation": "Malware includes viruses, ransomware, spyware, and trojans."
+        },
+        {
+          "id": 5,
+          "type": "multiple_choice",
+          "points": 2,
+          "question": "Which action helps protect your account from unauthorized access?",
+          "options": [
+            "Using the same password everywhere",
+            "Disabling antivirus software",
+            "Enabling two-factor authentication (2FA)",
+            "Clicking unknown email links"
+          ],
+          "correctAnswer": "Enabling two-factor authentication (2FA)",
+          "explanation": "2FA adds an extra security layer by requiring a second verification step."
+        },
+        {
+          "id": 6,
+          "type": "true_false",
+          "points": 1,
+          "question": "Public Wi-Fi networks are always safe to use for online banking.",
+          "correctAnswer": false,
+          "explanation": "Public Wi-Fi networks can be insecure and vulnerable to data interception."
+        },
+        {
+          "id": 7,
+          "type": "open_text",
+          "points": 1,
+          "question": "Name one common type of cyber attack.",
+          "acceptableAnswers": [
+            "phishing",
+            "ransomware",
+            "malware",
+            "ddos",
+            "brute force",
+            "spyware",
+            "trojan"
+          ],
+          "scoringRule": "Award 1 point for any valid cyber attack name.",
+          "explanation": "Cyber attacks aim to disrupt systems, steal data, or gain unauthorized access."
+        }
+      ]
+    }
+  }
