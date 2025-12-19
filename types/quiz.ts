@@ -1,7 +1,4 @@
-export type QuestionType =
-  | "multiple_choice"
-  | "true_false"
-  | "open_text";
+export type QuestionType = 'multiple_choice' | 'true_false' | 'open_text';
 
 export interface BaseQuestion {
   id: number;
@@ -12,27 +9,24 @@ export interface BaseQuestion {
 }
 
 export interface MultipleChoiceQuestion extends BaseQuestion {
-  type: "multiple_choice";
+  type: 'multiple_choice';
   options: string[];
   correctAnswer: string;
 }
 
 export interface TrueFalseQuestion extends BaseQuestion {
-  type: "true_false";
+  type: 'true_false';
   correctAnswer: boolean;
 }
 
 export interface OpenTextQuestion extends BaseQuestion {
-  type: "open_text";
+  type: 'open_text';
   acceptableKeywords?: string[];
   acceptableAnswers?: string[];
   sampleAnswer: string;
 }
 
-export type Question =
-  | MultipleChoiceQuestion
-  | TrueFalseQuestion
-  | OpenTextQuestion;
+export type Question = MultipleChoiceQuestion | TrueFalseQuestion | OpenTextQuestion;
 
 export interface Quiz {
   title: string;

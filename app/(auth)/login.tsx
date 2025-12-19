@@ -1,10 +1,11 @@
-import { router } from "expo-router";
-import { useState } from "react";
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
-import { useAuthStore } from "../../stores/authStore";
+import CustomButton from '@/components/CustomButton';
+import { router } from 'expo-router';
+import { useState } from 'react';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { useAuthStore } from '../../stores/authStore';
 
 export default function Login() {
-  const login = useAuthStore((s) => s.login);
+  const login = useAuthStore(s => s.login);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -13,17 +14,17 @@ export default function Login() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
-      setEmailError("Please enter a valid email address.");
+      setEmailError('Please enter a valid email address.');
       return;
     }
 
-    setEmailError("");
+    setEmailError('');
     login();
-    router.replace("/(app)/home");
+    router.replace('/(app)/home');
   };
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", padding: 20 }}>
+    <View style={styles.container}>
       <TextInput
         style={styles.input}
         placeholderTextColor="lightgray"
@@ -31,9 +32,9 @@ export default function Login() {
         keyboardType="email-address"
         autoCapitalize="none"
         value={email}
-        onChangeText={(text) => {
+        onChangeText={text => {
           setEmail(text);
-          setEmailError("");
+          setEmailError('');
         }}
         returnKeyType="done"
       />
@@ -48,11 +49,11 @@ export default function Login() {
         onChangeText={setPassword}
         returnKeyType="done"
       />
-
-      <Button
-        title="Login"
+<CustomButton
+        label="Login"
         onPress={handleLogin}
-      />
+        color='#1E90FF'
+        />
     </View>
   );
 }

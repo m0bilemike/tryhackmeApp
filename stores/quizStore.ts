@@ -1,5 +1,5 @@
-import { create } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
+import { create } from 'zustand';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 interface Answer {
   questionId: number;
@@ -31,7 +31,11 @@ export const useQuizStore = create<QuizState>()(
         set((state) => ({
           quizzes: {
             ...state.quizzes,
-            [quizId]: state.quizzes[quizId] || { currentQuestionIndex: 0, answers: [], completed: false },
+            [quizId]: state.quizzes[quizId] || {
+              currentQuestionIndex: 0,
+              answers: [],
+              completed: false,
+            },
           },
         })),
 
@@ -74,8 +78,10 @@ export const useQuizStore = create<QuizState>()(
         })),
     }),
     {
-      name: "quiz-storage",
-      storage: createJSONStorage(() => require("@react-native-async-storage/async-storage").default),
+      name: 'quiz-storage',
+      storage: createJSONStorage(
+        () => require('@react-native-async-storage/async-storage').default
+      ),
     }
   )
 );
